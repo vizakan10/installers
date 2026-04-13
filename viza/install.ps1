@@ -5,8 +5,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$manifestPath = Join-Path $PSScriptRoot "manifest.json"
-$manifest = Get-Content $manifestPath -Raw | ConvertFrom-Json
+$manifestUrl = "https://raw.githubusercontent.com/vizakan10/installers/main/viza/manifest.json"
+$manifest = (Invoke-WebRequest -UseBasicParsing -Uri $manifestUrl).Content | ConvertFrom-Json
 
 $installDir = $manifest.installDir.Replace("%LOCALAPPDATA%", $env:LOCALAPPDATA)
 $exePath = Join-Path $installDir $manifest.exeName
