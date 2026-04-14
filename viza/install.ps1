@@ -4,7 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$ProgressPreference = "SilentlyContinue"
+# $ProgressPreference = "SilentlyContinue"
 
 
 $manifestUrl = "https://raw.githubusercontent.com/vizakan10/installers/main/viza/manifest.json"
@@ -28,10 +28,10 @@ $tmpExe = Join-Path $env:TEMP "viza.exe"
 $tmpSha = Join-Path $env:TEMP "viza.exe.sha256"
 
 Write-Host "[VIZA] Downloading EXE..."
-Invoke-WebRequest -UseBasicParsing -Uri $downloadUrl -OutFile $tmpExe
+curl.exe -#" -L -o $tmpExe $downloadUrl
 
 Write-Host "[VIZA] Downloading checksum..."
-Invoke-WebRequest -UseBasicParsing -Uri $shaUrl -OutFile $tmpSha
+curl.exe -s -L -o $tmpSha $shaUrl
 
 $expected = (Get-Content $tmpSha -Raw).Trim().Split(" ")[0]
 $actual = (Get-FileHash $tmpExe -Algorithm SHA256).Hash.ToLower()
