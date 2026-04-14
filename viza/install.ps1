@@ -28,7 +28,7 @@ $tmpExe = Join-Path $env:TEMP "viza.exe"
 $tmpSha = Join-Path $env:TEMP "viza.exe.sha256"
 
 Write-Host "[VIZA] Downloading EXE..."
-curl.exe -#" -L -o $tmpExe $downloadUrl
+curl.exe -# -L -o $tmpExe $downloadUrl
 
 Write-Host "[VIZA] Downloading checksum..."
 curl.exe -s -L -o $tmpSha $shaUrl
