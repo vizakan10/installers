@@ -4,6 +4,8 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$ProgressPreference = "SilentlyContinue"
+
 
 $manifestUrl = "https://raw.githubusercontent.com/vizakan10/installers/main/viza/manifest.json"
 $manifest = (Invoke-WebRequest -UseBasicParsing -Uri $manifestUrl).Content | ConvertFrom-Json
