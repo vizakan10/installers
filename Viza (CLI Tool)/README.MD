@@ -27,9 +27,6 @@ VIZA is delivered as a portable, pre-compiled binary. No Python or Pip is requir
 To remove VIZA completely from your system:
 
 **Option A (Terminal):**
-Type `viza uninstall` and follow the prompts.
-
-**Option B (Manual):**
 Run `uninstall_viza.bat` from your original installation folder.
 
 ---
