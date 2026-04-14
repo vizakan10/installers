@@ -1,8 +1,0 @@
-{
-  "app": "viza",
-  "latestVersion": "1.0.2",
-  "exeName": "viza.exe",
-  "installDir": "%LOCALAPPDATA%\\Viza",
-  "downloadUrl": "https://github.com/vizakan10/installers/releases/download/viza-v1.0.2/viza.exe",
-  "sha256Url": "https://github.com/vizakan10/installers/releases/download/viza-v1.0.2/viza.exe.sha256"
-}
