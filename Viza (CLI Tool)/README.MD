@@ -8,7 +8,7 @@ VIZA brings the power of state-of-the-art LLMs directly to your command line. Fa
 ## 🚀 Installation (Recommended)
 VIZA is delivered as a portable, pre-compiled binary. No Python or Pip is required.
 
-1. **[Download the Latest viza_release.zip](YOUR_GITHUB_RELEASE_LINK)**
+1. **[Download](https://github.com/vizakan10/installers/releases/tag/viza-v1.0.2)**
 2. **Extract the ZIP** to a folder of your choice.
 3. Right-click **`install_viza.bat`** and select **"Run as Administrator"**.
 4. Restart your terminal and type `viza` to begin.
